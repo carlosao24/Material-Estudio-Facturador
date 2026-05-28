@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="material-estudio.css">
+</head>
+<body>
+    <h1>Material de estudio del Simulador de Facturación</h1>
+
+    <section id="fundamento-aritmetica">
+        <h2>Aritmética Comercial y Proporcionalidad</h2>
+        <p>¿Qué explica?: Cómo calcula el sistema los importes en base</p>
+        <p>a la cantidad de servicios que el usuario solicita.</p>
+        <div>
+            Fórmula:
+            precioTotal = precioUnitario x Cantidad
+        </div>
+        <div>
+            <input type="number" placeholder="precioUnitario" id="precioUnitario">
+            <br>
+            <input type="number" placeholder="cantidad" id="cantidad">
+            <br>
+            <button onclick="calcularPrecioTotal()">Calcular</button>
+            <br>
+            <span id="mensaje1"></span>
+        </div>
+    </section>
+
+
+    <section id="fundamento-logica">
+        <h2>Álgebra de Boole y Estructuras Condicionales</h2>
+        <p>¿Qué explica?: Cómo usa el simulador la lógica binaria (Verdadero/Falso)</p>
+        <p>para validar que los datos ingresados sean correctos antes de procesarlos.</p>
+        <div>
+            Fórmula: 
+            Si(longitud de cédula diferente de 10) muestra Error
+        </div>
+        <div>
+            <input type="text" placeholder="cedula" id="Cedula">
+            <br>
+            <button onclick="verificarCedula()">Verificar</button>
+            <br>
+            <span id="mensaje2"></span>
+        </div>
+    </section>
+
+
+    <section id="fundamento-conjuntos">
+        <h2>Teoría de Conjuntos y Arreglos de Objetos</h2>
+        <p>¿Qué explica?: Cómo se agrupan los datos en "colecciones" o conjuntos</p>
+        <p>(empleados, afiliados, servicios) para poder consultarlos y cruzarlos entre sí.</p>
+        <div>
+            conjunto: empleados
+            conjunto clientes afiliados
+            conjunto: servicios.
+        </div>
+    </section>
+
+
+    <section id="fundamento-algoritmos">
+        <h2>Algoritmos de Búsqueda y Recorrido Lineal</h2>
+        <p>¿Qué explica?: La lógica matemática detrás de los ciclos for.</p> 
+        <p>Cómo la computadora viaja elemento por elemento dentro de un conjunto</p>
+        <p>hasta encontrar una coincidencia exacta.</p>
+        <div> 
+            Fórmula: 
+            elemento ingresado ==  elemento guardado
+        </div>
+        <div>
+            <h3>Credencial: 12345</h3>
+            <br>
+            <input type="number" placeholder="Credencial" id="Credencial">
+            <br>
+            <button onclick="verificarCredencial()">Ingresar</button>
+            <br>
+            <span id="mensaje3"></span>
+        </div>
+    </section>
+
+
+    <section id="fundamento-acumuladores">
+        <h2>Sumatorias y Variación Porcentual (Totales y Descuentos)</h2>
+        <p>¿Qué explica?: Las operaciones financieras finales:</p>
+        <p>cómo se van sumando los subtotales para crear un gran total,</p>
+        <p>y cómo se aplica un descuento matemático si</p>
+        <p>el cliente pertenece al conjunto de "afiliados".</p>
+        <div>
+            Fórmulas: 
+            subTotal += precioTotal 
+            Si el cliente = cliente afiliado 
+            El IVA disminuye un 2% caso contrario se mantiene
+            IVAFactura = (subTotal * 15)/100
+            totalFactura = subTotal + IVAFactura
+        </div>
+        <div>
+            <h3>Cedula: 47934</h3>
+            <h3>IVA: 15%</h3>
+            <br>
+            <input type="number" placeholder="subTotalFactura" id="subTotalFactura">
+            <br>
+            <input type="text" placeholder="cedula" id="cedula">
+            <br>
+            <button onclick="calcularTotalFactura()">Calcular</button>
+            <br>
+            <span id="mensaje4"></span>
+        </div>
+    </section>
+
+
+    <script src="material-estudio.js"></script>
+    <script src="utilitarios.js"></script>
+</body>
+</html>
